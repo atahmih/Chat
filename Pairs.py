@@ -1,3 +1,9 @@
+#reflections is a pre-defined set of queries and answers eg I am and You are
+
+#The pairs define a query and response list for the conversation. 
+# Include the pairs of queries and replies it gives
+#It uses Regex to get input and replies it as output
+
 pairs = (
     (
         r"I need (.*)",
@@ -286,9 +292,8 @@ pairs = (
     (
         r"quit",
         (
-            "Thank you for talking with me.",
-            "Good-bye.",
-            "Thank you, that will be $150.  Have a good day!",
+            "Thank you for talking with me. I hope we talk soon again.",
+            "Good-bye. Have a beautiful day.",
         ),
     ),
     (

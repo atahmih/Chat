@@ -1,6 +1,10 @@
 from Chat import Chat, reflections
 from Pairs import pairs
 
+from naoqi import ALProxy
+
+tts = ALProxy("ALTextToSpeech", "127.0.0.1", 9559)
+
 eliza_chatbot = Chat(pairs, reflections)
 
 ##Refer to Lib -> nltk -> util.py for modifications
@@ -21,10 +25,9 @@ def eliza_chat():
                         user_input = user_input[:-1]               
                     reply = eliza_chatbot.converse(user_input)
                     print(reply)
+                    tts.say(reply)
   
         
-
-
 
 def demo():
     eliza_chat()
