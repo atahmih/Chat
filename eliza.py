@@ -29,6 +29,5 @@ def eliza_chat():
 def demo():
     eliza_chat()
 
-
 if __name__ == "__main__":
     demo()
