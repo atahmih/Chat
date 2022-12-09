@@ -5,6 +5,10 @@
 #It uses Regex to get input and replies it as output
 
 pairs = (
+    # (
+    #     r"I'm (.*). And you",
+    #     ("%1 always good. So long as my batteries work."),
+    # ),
     (
         r"I need (.*)",
         (
@@ -54,6 +58,12 @@ pairs = (
         ),
     ),
     (
+        r"I\'m feeling (.*)",
+        (
+            "That's great. Tell me more about it."
+        ),
+    ),
+    (
         r"I\'m (.*)",
         (
             "How does being %1 make you feel?",
@@ -79,6 +89,10 @@ pairs = (
             "What do you think?",
         ),
     ),
+    # (
+    #     r"How are you",
+    #     ("I am always good. So long as my batteries work."),
+    # ),
     (
         r"How (.*)",
         (
@@ -114,6 +128,10 @@ pairs = (
     (
         r"I think (.*)",
         ("Do you doubt %1?", "Do you really think so?", "But you're not sure %1?"),
+    ),
+    (
+        r"(.*) about you",
+        ("I'm just a companion robot."),
     ),
     (
         r"(.*) friend (.*)",
@@ -227,7 +245,7 @@ pairs = (
     (
         r"My (.*)",
         (
-            "I see, your %1.",
+            "I see, your %1. Tell me more about it",
             "Why do you say that your %1?",
             "When your %1, how do you feel?",
         ),
@@ -290,12 +308,19 @@ pairs = (
         ),
     ),
     (
+        r"Do you (.*)",
+        (
+            "Maybe I wasn't built for that",
+        )
+    ),
+    (
         r"quit",
         (
             "Thank you for talking with me. I hope we talk soon again.",
             "Good-bye. Have a beautiful day.",
         ),
     ),
+    
     (
         r"(.*)",
         (
@@ -304,11 +329,18 @@ pairs = (
             "Can you elaborate on that?",
             "Why do you say that %1?",
             "I see. Tell me more",
-            "Very interesting.",
-            "%1.",
+            "Very interesting. Tell me more",
+            # "%1.",
             "I see.  And what does that tell you?",
             "How does that make you feel?",
             "How do you feel when you say that?",
+        ),
+    ),
+    (
+        r"Hi",
+        (
+            "Hi. How are you?",
+            "Hello there.",
         ),
     ),
 )
