@@ -8,7 +8,7 @@ eliza_chatbot = Chat(pairs, reflections)
 
 vocabulary = []
 
-def eliza_chat():
+def eliza_chat(): 
     pre_input = raw_input("Welcome to NAO. Type Hi to begin\n")
     if pre_input == 'Hi':
         print("Hello. My name is NAO.\nHow are you today?")
